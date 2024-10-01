@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Navigation
+alias ..="cd .."
+
+export CLICOLOR=1
+export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
+
+# p = slash after dir
+# A = all exept . and ..
+# l = long
+# h = human readable file sizes
+
+alias ls='ls -p'
+alias la='ls -Ap'
+alias ll='ls -lAph'
+alias lsd='ls -p --color=always | grep --color=never '/$''
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'

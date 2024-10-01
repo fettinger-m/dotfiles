@@ -1,0 +1,15 @@
+# casks
+alt-tab
+iterm2
+rectangle
+karabiner-elements
+bitwarden
+readdle-spark
+
+# formulaes
+git
+tree
+stow
+tldr
+teamookla/speedtest/speedtest
+pure
