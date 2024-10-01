@@ -1,0 +1,7 @@
+[user]
+	name = fettinger-m
+	email = max.fettinger@icloud.com
+[init]
+	defaultBranch = master
+[core]
+	excludesFile = ~/.gitignore
