@@ -18,3 +18,14 @@ alias lsd='ls -p --color=always | grep --color=never '/$''
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+alias bi='brew install'
+
+# Specktest
+alias specktest='speedtest'
+
+# alias for aliases
+alias aliases='code $HOME/.aliases'
+
+# Brew aliases
+alias brew install 
