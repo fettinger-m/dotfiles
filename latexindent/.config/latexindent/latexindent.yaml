@@ -1,0 +1,5 @@
+# latexindent settings for Zed (texlab passes this file with -l)
+# 2 spaces instead of the default tab
+defaultIndent: "  "
+indentRules:
+  item: "  " # continuation lines of \item

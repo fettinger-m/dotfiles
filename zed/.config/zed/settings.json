@@ -46,6 +46,8 @@
     },
     "LaTeX": {
       "soft_wrap": "editor_width",
+      "tab_size": 2,
+      "hard_tabs": false,
       "formatter": "language_server",
     },
   },
@@ -63,9 +65,7 @@
         "texlab": {
           "latexFormatter": "latexindent",
           "latexindent": {
-            "modifyLineBreaks": true,
-            // "local": "path/to/config",
-            // "replacement": null
+            "local": "/Users/mf/.config/latexindent/latexindent.yaml",
           },
           "build": {
             "onSave": true,
