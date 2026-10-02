@@ -28,3 +28,5 @@ unset __conda_setup
 # .local/bin is for user scripts and binaries
 export PATH="$HOME/.local/bin:$PATH"
 
+# Editor for git commits etc.: new Zed window, waits until closed
+export EDITOR="zed --wait --new"

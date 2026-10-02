@@ -1,3 +1,20 @@
-font-family = IBM Plex
+# Font
+font-family = IBM Plex Mono
 font-thicken = true
+minimum-contrast = 1.5
+
+# Theme
 theme = Ayu
+
+# Window
+window-padding-x = 12
+window-padding-y = 8
+window-padding-balance = true
+macos-titlebar-style = tabs
+
+# Agents / TUIs
+scrollback-limit = 100000000
+macos-option-as-alt = left
+
+# Drop-down terminal from any app
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
