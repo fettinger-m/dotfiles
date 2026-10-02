@@ -1,5 +1,5 @@
 tap "jurplel/tap"
-# PostScript/PDF interpreter (used by compress_pdf)
+# Interpreter for PostScript and PDF
 brew "ghostscript"
 # Configurable static site generator
 brew "hugo"
@@ -13,8 +13,6 @@ brew "poppler"
 brew "pure"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
-# Software environment for statistical computing
-brew "r"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Organize software neatly under a single directory tree (e.g. /usr/local)

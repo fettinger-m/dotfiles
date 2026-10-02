@@ -8,6 +8,7 @@ My macOS setup. Configs are linked into `~` with [GNU Stow](https://www.gnu.org/
 | `aliases` | `~/.aliases` |
 | `functions` | `~/.functions` |
 | `git` | `~/.gitconfig`, `~/.config/git/ignore` |
+| `ghostty` | `~/.config/ghostty/config` |
 | `zed` | `~/.config/zed/settings.json`, `tasks.json` |
 | `claude` | `~/.claude/CLAUDE.md` (rules for Claude Code) |
 
@@ -26,7 +27,7 @@ cd ~/dotfiles
 brew bundle
 
 # 4. Link configs (move any existing ~/.zshrc etc. out of the way first)
-stow zsh aliases functions git zed claude
+stow zsh aliases functions git ghostty zed claude
 
 # 5. VS Code settings (not stowed: the target is a single file deep in ~/Library)
 ln -sf ~/dotfiles/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
