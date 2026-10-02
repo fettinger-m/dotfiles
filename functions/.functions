@@ -18,3 +18,35 @@ mkcd ()
     mkdir -p -- "$1" &&
        cd -P -- "$1"
 }
+
+compress_pdf() {
+  local input_file="$1"
+  local quality="${2:-screen}"
+  local output_file
+
+  if [[ -z "$input_file" ]]; then
+    print -u2 "usage: compress_pdf <input.pdf> [screen|ebook|printer|prepress|default]"
+    return 2
+  fi
+
+  if ! command -v gs >/dev/null 2>&1; then
+    print -u2 "compress_pdf: gs (Ghostscript) not found"
+    return 127
+  fi
+
+  if [[ ! -r "$input_file" ]]; then
+    print -u2 "compress_pdf: cannot read file: $input_file"
+    return 1
+  fi
+
+  output_file="${input_file%.*}_compressed.pdf"
+
+  gs -sDEVICE=pdfwrite \
+     -dCompatibilityLevel=1.4 \
+     -dPDFSETTINGS=/"$quality" \
+     -dNOPAUSE \
+     -dQUIET \
+     -dBATCH \
+     -sOutputFile="$output_file" \
+     "$input_file"
+}

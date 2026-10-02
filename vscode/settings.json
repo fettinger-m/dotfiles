@@ -1,27 +1,203 @@
 {
-    // Visuals
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.fontFamily": "JetBrainsMono Nerd Font,monospace",
-    "editor.minimap.enabled": false,
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
-    "workbench.colorTheme": "Ayu Mirage",
-    "workbench.iconTheme": "catppuccin-mocha",
-    "workbench.productIconTheme": "icons-carbon",
-    "workbench.sideBar.location": "right",
-    "workbench.fontAliasing": "antialiased",
-    "workbench.startupEditor": "none",
+  // Zen Mode
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "window.dialogStyle": "custom",
+  "window.title": "${activeEditorMedium}",
+  "window.commandCenter": false,
+  "window.density.editorTabHeight": "compact",
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.sideBar.location": "right",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "breadcrumbs.enabled": false,
+  "editor.glyphMargin": false,
+  // "workbench.editor.showTabs": "none",
 
-    // Editor
-    "workbench.editor.showTabs": "multiple",
-    "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.perEditorGroup": true,
-    "workbench.editor.limit.value": 5,
-    "window.dialogStyle": "custom",
-    "window.titleBarStyle": "custom",
-    "window.title": "${rootName}",
-    "window.commandCenter": false,
-    "workbench.activityBar.location": "hidden",
-    "workbench.settings.editor": "json",
+  // Visuals
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.fontAliasing": "antialiased",
+  "editor.fontFamily": "IBMPlexMono, monospace",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.productIconTheme": "icons-carbon",
+
+  // Editor
+  "workbench.startupEditor": "none",
+  "workbench.settings.editor": "json",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 5,
+  "explorer.excludeGitIgnore": true,
+  "editor.lineNumbers": "relative",
+
+  // Saving and Formatting
+  "files.autoSave": "onWindowChange",
+  "editor.formatOnSave": true,
+
+  // Vim Stuff
+  "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // switch b/w buffers
+    // Defined in the keybindings.json file
+    // Circle around buffers with alt + tab
+    // split
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"],
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": [":split"],
+    },
+    // panes
+    // Are definied in the keybindings.json file, because that way they can be used in non-text editors too
+    // are definied as Ctrl + h/j/k/l
+    // NICE TO HAVE
+    {
+      "before": ["leader", "w"],
+      "commands": [":w!"],
+    },
+    {
+      "before": ["leader", "q"],
+      "commands": [":q!"],
+    },
+    {
+      "before": ["leader", "x"],
+      "commands": [":x!"],
+    },
+    // LaTeX Workshop
+    {
+      "before": ["leader", "l", "b"],
+      "commands": ["latex-workshop.build"],
+    },
+    {
+      "before": ["leader", "l", "v"],
+      "commands": ["latex-workshop.view"],
+    },
+    {
+      "before": ["leader", "l", "n"],
+      "commands": ["latex-workshop.select-envname"],
+    },
+    {
+      "before": ["leader", "l", "c"],
+      "commands": ["latex-workshop.select-envcontent"],
+    },
+    {
+      "before": ["leader", "l", "j"],
+      "commands": ["latex-workshop.synctex"],
+    },
+    // {
+    //   "before": ["[", "d"],
+    //   "commands": ["editor.action.marker.prev"]
+    // },
+    // {
+    //   "before": ["]", "d"],
+    //   "commands": ["editor.action.marker.next"]
+    // },
+    // {
+    //   "before": ["<leader>", "c", "a"],
+    //   "commands": ["editor.action.quickFix"]
+    // },
+    {
+      "before": ["leader", "f"],
+      "commands": ["workbench.action.quickOpen"],
+    },
+    {
+      "before": ["leader", "r", "n"],
+      "commands": ["editor.action.rename"],
+    },
+    // { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    // {
+    //   "before": ["g", "h"],
+    //   "commands": ["editor.action.showDefinitionPreviewHover"]
+    // }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"],
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"],
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"],
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"],
+    },
+    // toggle comment selection
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.commentLine"],
+    },
+    {
+      "before": ["leader", "l", "w"],
+      "commands": ["latex-workshop.wrap-env"],
+    },
+    {
+      "before": ["leader", "l", "s"],
+      "commands": ["latex-workshop.surround"],
+    },
+  ],
+  // To remember
+  // Hide suggestion widget without leaving insert mode: shift + esc
+  "chat.commandCenter.enabled": false,
+  // Language Specific Settings
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+  },
+  // PYTHON / JUPYTER
+  "notebook.consolidatedOutputButton": false,
+  "notebook.globalToolbarShowLabel": "never",
+  "notebook.markup.fontSize": 12,
+  "python.defaultInterpreterPath": "/opt/homebrew/anaconda3",
+
+  // LATEX
+  "[latex]": {
+    "editor.suggest.showWords": false,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+  },
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.intellisense.subsuperscript.enabled": true,
+  "latex-workshop.intellisense.argumentHint.enabled": false,
+  "latex-workshop.view.pdf.color.dark.backgroundColor": "#282C34",
+  "latex-workshop.view.pdf.color.dark.pageBorderColor": "#282C34",
+  "git.confirmSync": false,
+  "workbench.editor.languageDetection": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "[r]": {
+    "editor.wordWrap": "on",
+  },
+  "[rmd]": {
+    "editor.wordWrap": "on",
+  },
+  "[css]": {
+    "editor.wordWrap": "off",
+  },
+  "notebook.defaultFormatter": "ms-python.black-formatter",
+  "notebook.formatOnSave.enabled": true,
 }
