@@ -1,0 +1,82 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "hide_gitignore": true,
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "fast": true
+      },
+      "type": "registry"
+    },
+    "github-copilot-cli": {
+      "default_config_options": {
+        "allow_all": "off",
+      },
+      "type": "registry",
+    },
+  },
+  "proxy": "",
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "session": {
+    "trust_all_worktrees": false,
+  },
+  "vim_mode": false,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark",
+  },
+  "format_on_save": "on",
+  "languages": {
+    "JSONC": {
+      "formatter": "prettier",
+    },
+    "LaTeX": {
+      "soft_wrap": "editor_width",
+      "formatter": "language_server",
+    },
+  },
+  "lsp": {
+    "ltex": {
+      "settings": {
+        "ltex": {
+          "language": "de-DE",
+          "enabled": false,
+        },
+      },
+    },
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "latexFormatter": "latexindent",
+          "latexindent": {
+            "modifyLineBreaks": true,
+            // "local": "path/to/config",
+            // "replacement": null
+          },
+          "build": {
+            "onSave": true,
+            "forwardSearchAfter": true,
+          },
+          "forwardSearch": {
+            "executable": "/Applications/Skim.app/Contents/SharedSupport/displayline",
+            "args": ["-r", "-g", "%l", "%p", "%f"],
+          },
+        },
+      },
+    },
+  },
+}

@@ -3,8 +3,6 @@
 	email = max.fettinger@icloud.com
 [init]
 	defaultBranch = master
-[core]
-	excludesFile = ~/.gitignore
 
 [includeIf "gitdir:~/dev/studass/"]
     path = ~/dev/studass/.gitconfig
